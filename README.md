@@ -4,6 +4,8 @@ enjoyreading2
 Maintenance fork of the Enjoy Reading addon by jblanche.
 This, unlike the upstream, works with current Firefox versions.
 
+XPI download (for installing in Firefox): <http://pub.lrem.net/2013/09/enjoy-reading-2.xpi>
+
 The upstream: <https://addons.mozilla.org/en-us/firefox/addon/enjoy-reading/>
 
 User review
