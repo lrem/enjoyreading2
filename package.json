@@ -1,0 +1,1 @@
+{"license": "", "description": "Maintenance fork of the Enjoy Reading by jblanche.", "contributors": [], "author": "lRem", "url": "", "dependencies": ["api-utils", "addon-kit"], "version": "initial.rev16", "lib": "lib", "fullName": "Enjoy Reading 2", "main": "main", "id": "jid0-R9xPsoETsjTKZQNYZbycVxlHj4w", "name": "enjoy-reading-2"}
