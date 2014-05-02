@@ -276,6 +276,7 @@ var readability = {
             "<a class='controls' href='#' title='Novel' id='novel'>Novel</a>" +
             "<a class='controls' href='#' title='Ebook' id='ebook'>Ebook</a>" +
             "<a class='controls' href='#' title='Terminal' id='terminal'>Terminal</a>" +
+            "<a class='controls' href='#' title='Terminal' id='dark'>Dark</a>" +
 
             "<a href='#' onclick='javascript:window.print();' title='Print page' id='print-page'>Print Page</a>" ;
             //"<a href='#' onclick='readability.emailBox(); return false;' title='Email page' id='email-page'>Email Page</a>";

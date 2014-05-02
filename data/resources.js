@@ -1,6 +1,6 @@
 var marginClasses = ['margin-x-narrow','margin-narrow', 'margin-medium', 'margin-wide', 'margin-x-wide'] ;
 var fontsizeClasses = ['size-x-small', 'size-small', 'size-medium', 'size-large', 'size-x-large'] ;
-var styleClasses = ['style-newspaper', 'style-novel', 'style-ebook', 'style-terminal'] ;
+var styleClasses = ['style-newspaper', 'style-novel', 'style-ebook', 'style-terminal', 'style-dark'] ;
 
 /* Listen for Escape keypress */
 var listenForKeystroke = function(){
@@ -121,7 +121,7 @@ self.port.on('click', function(urls) {
       document.querySelector('head').insertAdjacentHTML("beforeend", new XMLSerializer().serializeToString(link));
     }
     else{
-      document.querySelector('head').appendChild(link)
+      document.querySelector('head').appendChild(link);
     }
     listenForKeystroke();
   }
@@ -156,6 +156,9 @@ self.port.on('click', function(urls) {
           break;
         case 'terminal':
           setStyle('style-terminal');
+          break;
+        case 'dark':
+          setStyle('style-dark');
           break;
       }
     });
