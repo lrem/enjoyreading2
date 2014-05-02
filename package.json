@@ -6,6 +6,7 @@
         "addon-kit"
     ],
     "description": "Firefox addon for the improved readability of web pages. Based on the work of jblanche, which was, in turn, based on the work of Arc90's Labs.",
+    "icon": "data/figures/logo-32.png",
     "id": "jid0-R9xPsoETsjTKZQNYZbycVxlHj4w",
     "lib": "lib",
     "license": "Apache Public License 2.0",
