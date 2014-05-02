@@ -187,7 +187,7 @@ var readability = {
 
         window.setTimeout(function() {
           articleTools.classList.remove('hover');
-        }, 2000)
+        }, 2000);
 
         /** Smooth scrolling **/
         document.onkeydown = function(e) {
