@@ -1,4 +1,4 @@
-var marginClasses = ['margin-x-narrow','margin-narrow', 'margin-medium', 'margin-wide', 'margin-x-wide'] ; 
+var marginClasses = ['margin-x-narrow','margin-narrow', 'margin-medium', 'margin-wide', 'margin-x-wide'] ;
 var fontsizeClasses = ['size-x-small', 'size-small', 'size-medium', 'size-large', 'size-x-large'] ;
 var styleClasses = ['style-newspaper', 'style-novel', 'style-ebook', 'style-terminal'] ;
 
@@ -16,7 +16,7 @@ var listenForKeystroke = function(){
 var augmentSize = function(){
   var currentSize = getSize();
   var index = fontsizeClasses.indexOf(currentSize);
-  var oldClass, newClass ;  
+  var oldClass, newClass ;
   if(index < fontsizeClasses.length -1){
     oldClass = fontsizeClasses[index];
     newClass = fontsizeClasses[index+1];
@@ -50,7 +50,7 @@ var getSize = function(){
 var augmentMargin = function(){
   var currentMargin = getMargin();
   var index = marginClasses.indexOf(currentMargin);
-  var oldClass, newClass ;  
+  var oldClass, newClass ;
   if(index < marginClasses.length -1){
     oldClass = marginClasses[index];
     newClass = marginClasses[index+1];
@@ -63,7 +63,7 @@ var augmentMargin = function(){
 var reduceMargin = function(){
   var currentMargin = getMargin();
   var index = marginClasses.indexOf(currentMargin);
-  var oldClass, newClass ;  
+  var oldClass, newClass ;
   if(index > 0){
     oldClass = marginClasses[index];
     newClass = marginClasses[index-1];
@@ -82,7 +82,7 @@ var getMargin = function(){
 };
 
 
-/* Styles */ 
+/* Styles */
 var getStyle = function(){
   var bodyClasses = document.getElementById('readabilityBody').className.split(' ');
   var bodyStyleClass = _.find(bodyClasses, function(klass){
@@ -98,20 +98,20 @@ var setStyle = function(newClass){
   document.getElementById('readabilityBody').classList.add(newClass);
   document.getElementById('readOverlay').classList.add(newClass);
   self.port.emit('style', {rule: "style", value: newClass});
-  
+
 };
 
 
 self.port.on('click', function(urls) {
   //position: fixed;top: 10px;right: 10px;width: 200px;height: 50px;background: rgba(125, 125, 125, 0.9);border-radius: 5px;padding: 10px;color: white;text-align: center;line-height: 50px;
-  
-  
-  // Is the CSS available yet ? 
+
+
+  // Is the CSS available yet ?
   if(!document.getElementById('readability-link')){
-    
+
     var link = content.document.createElement('link');
     link.rel = 'stylesheet';
-    link.id = 'readability-link';    
+    link.id = 'readability-link';
     link.href = urls.css;
     link.type = 'text/css';
     link.media = 'all';
@@ -123,8 +123,8 @@ self.port.on('click', function(urls) {
     }
     listenForKeystroke();
   }
-  
-  //Is the plugin active ? 
+
+  //Is the plugin active ?
   if(!document.getElementById('readabilityBody')){
     self.port.emit('ready');
     window.addEventListener("click", function(event){
@@ -157,12 +157,10 @@ self.port.on('click', function(urls) {
           break;
       }
     });
-    
+
   }
   else{
     window.location.reload();
   }
-  
+
 });
-
-
