@@ -103,7 +103,9 @@ var setStyle = function(newClass){
 
 
 self.port.on('click', function(urls) {
-  //position: fixed;top: 10px;right: 10px;width: 200px;height: 50px;background: rgba(125, 125, 125, 0.9);border-radius: 5px;padding: 10px;color: white;text-align: center;line-height: 50px;
+  // position: fixed; top: 10px; right: 10px;width: 200px; height: 50px;
+  // background: rgba(125, 125, 125, 0.9); border-radius: 5px; padding: 10px;
+  // color: white; text-align: center; line-height: 50px;
 
 
   // Is the CSS available yet ?
